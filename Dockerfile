@@ -1,4 +1,4 @@
-FROM wodby/php-nginx:5.6
+FROM wodby/php-nginx
 
 # Install Nginx and fix php5-fpm
 RUN apt-get update && \
