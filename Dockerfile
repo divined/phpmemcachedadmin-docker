@@ -1,5 +1,4 @@
-FROM ubuntu:14.04
-MAINTAINER love.nyberg@lovemusic.se
+FROM wodby/php-nginx:5.6
 
 # Install Nginx and fix php5-fpm
 RUN apt-get update && \
