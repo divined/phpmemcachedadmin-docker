@@ -1,4 +1,6 @@
-FROM wodby/php-nginx
+FROM wodby/nginx
+
+USER root
 
 RUN set -ex && \
     wget https://blog.elijaa.org/wp-content/uploads/2017/03/phpmemcachedadmin-1.3.0.tar.gz
