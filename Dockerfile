@@ -2,10 +2,7 @@ FROM wodby/nginx
 
 USER root
 
-CMD "sh" "-c" "echo blog.elijaa.org 87.98.255.19 >> /etc/hosts"
-
 RUN set -ex && \
-
     wget http://blog.elijaa.org/wp-content/uploads/2017/03/phpmemcachedadmin-1.3.0.tar.gz
 
 RUN chown -R www-data:www-data /var/www/html
