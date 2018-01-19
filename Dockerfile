@@ -38,6 +38,8 @@ RUN chown -R www-data:www-data /usr/share/nginx/html
 WORKDIR /etc/nginx
 VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx", "/usr/share/nginx/html", "/phpmemcachedadmin"]
 
+COPY Memcache.php /var/www/html/memcachedadmin/Config/Memcache.php
+
 # Expose port
 EXPOSE 80
 
