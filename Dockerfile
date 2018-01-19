@@ -1,6 +1,6 @@
 FROM wodby/php-nginx
 
-ENV ADMIN_URL="http://nginx.org/download/nginx-${NGINX_VER}.tar.gz"
+ENV ADMIN_URL="https://github.com/elijaa/phpmemcachedadmin/archive/1.3.0.tar.gz"
 
 RUN wget -qO- ${ADMIN_URL} | tar xz -C /var/www/html/
 
