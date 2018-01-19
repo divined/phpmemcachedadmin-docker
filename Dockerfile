@@ -2,7 +2,10 @@ FROM wodby/nginx
 
 USER root
 
+CMD "sh" "-c" "echo nameserver 8.8.8.8 >> /etc/resolv.conf"
+
 RUN set -ex && \
+
     wget http://blog.elijaa.org/wp-content/uploads/2017/03/phpmemcachedadmin-1.3.0.tar.gz
 
 RUN chown -R www-data:www-data /var/www/html
