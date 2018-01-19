@@ -1,9 +1,9 @@
 FROM wodby/php-nginx
 
 # Install phpmemcacheadmin
-RUN wget http://phpmemcacheadmin.googlecode.com/files/phpMemcachedAdmin-1.2.2-r262.tar.gz && \
-    tar xfz phpMemcachedAdmin-1.2.2-r262.tar.gz -C /usr/share/nginx/html/ && \
-    rm phpMemcachedAdmin-1.2.2-r262.tar.gz
+RUN wget https://github.com/elijaa/phpmemcachedadmin/archive/1.3.0.tar.gz && \
+    tar xfz 1.3.0.tar.gz -C /usr/share/nginx/html/ && \
+    rm 1.3.0.tar.gz
 
 # Define mountable directories
 RUN chown -R www-data:www-data /usr/share/nginx/html
