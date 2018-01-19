@@ -2,10 +2,10 @@ FROM wodby/php-nginx
 
 ENV ADMIN_URL="http://nginx.org/download/nginx-${NGINX_VER}.tar.gz" \
 
-RUN wget -qO- ${ADMIN_URL} | tar xz -C /tmp/
+RUN wget -qO- ${ADMIN_URL} | tar xz -C /var/www/html/
 
 # Define mountable directories
-RUN chown -R www-data:www-data /usr/share/nginx/html
+RUN chown -R www-data:www-data /var/www/html
 
 # Define working directory and volumes
 WORKDIR /etc/nginx
