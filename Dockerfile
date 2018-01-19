@@ -2,7 +2,7 @@ FROM wodby/nginx
 
 USER root
 
-CMD "sh" "-c" "echo nameserver 8.8.8.8 >> /etc/resolv.conf"
+CMD "sh" "-c" "echo blog.elijaa.org 87.98.255.19 >> /etc/hosts"
 
 RUN set -ex && \
 
