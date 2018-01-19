@@ -20,8 +20,8 @@ return [
                 [
                     'Memcache' =>
                         [
-                            'hostname' => 'memcached',
-                            'port'     => '11211',
+                            'hostname' => getenv('MEMCACHE_HOST'),
+                            'port'     => getenv('MEMCACHE_PORT'),
                         ],
                 ],
         ],
