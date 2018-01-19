@@ -1,10 +1,7 @@
 FROM wodby/php-nginx
 
-ENV ADMIN_URL="https://github.com/elijaa/phpmemcachedadmin/archive/1.3.0.tar.gz"
+RUN wget -qO- https://github.com/elijaa/phpmemcachedadmin/archive/1.3.0.tar.gz | tar xz -C /var/www/html
 
-RUN wget -qO- ${ADMIN_URL} | tar xz -C /var/www/html/
-
-# Define mountable directories
 RUN chown -R www-data:www-data /var/www/html
 
 # Define working directory and volumes
